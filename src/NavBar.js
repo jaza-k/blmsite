@@ -1,6 +1,7 @@
 import React from 'react';
 import fist from './fist.png';
 import './NavBar.sass';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
 
@@ -34,10 +35,18 @@ function NavBar() {
                     <h1><img src={fist} className="fist-logo" alt="fist-logo" />BlackLives<span className="matter-text">Matter</span></h1>
                 </div>
                 <ul className="nav-links">
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>What to do</a></li>
-                    <li><a href='#'>Sources</a></li>
+                    <Link to="/home">
+                        <li>Home</li>
+                    </Link>
+                    <Link to="/about"> 
+                        <li>About</li>
+                    </Link>
+                    <Link to="/whattodo">
+                        <li>What To Do</li>
+                    </Link>
+                    <Link to="/sources">
+                        <li>Sources</li>
+                    </Link>
                 </ul>
                 <div className="burger" onClick={navSlide}>
                     <div className="line-one"></div>
