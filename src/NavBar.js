@@ -1,5 +1,4 @@
 import React from 'react';
-import fist from './fist.png';
 import './NavBar.sass';
 import { Link } from 'react-router-dom';
 
@@ -31,9 +30,6 @@ function NavBar() {
     return (
         <div className="NavBar">
             <nav>
-                <div className="logo">
-                    <h1><img src={fist} className="fist-logo" alt="fist-logo" />BlackLives<span className="matter-text">Matter</span></h1>
-                </div>
                 <ul className="nav-links">
                     <Link to="/home">
                         <li>Home</li>
