@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap')
 
 /// Viewport sized typography with minimum and maximum values
 /// @author Eduardo Boucas (https://codepen.io/eduardoboucas/)
@@ -21,6 +22,89 @@ body
   background-color: #EAEAEA
   margin: 0
   overflow: hidden
+
+.blacklives-text, .matter-text
+  color: #341F2C
+  font-family: 'IBM Plex Sans', sans-serif
+  display: inline-block
+  +responsive-font(2vw, 20px, 26px)
+  user-select: none
+
+.blacklives-text
+  font-weight: 10
+
+.matter-text
+  font-weight: 1000
+
+.fist
+  width: 40px
+  height: 40px
+  margin: 0 5px 24px 5px
+  vertical-align: middle
+  @media (max-width: 1250px)
+    width: 35px
+    height: 35px
+    margin: 5px 5px 24px 5px
+  @media (max-width: 768px)
+    width: 30px
+    height: 30px
+    margin: 9px 5px 24px 5px
+
+
+.opening-text, .secondary-text
+  font-family: 'Overpass', sans-serif
+  font-weight: 10
+  color: #341F2C
+
+.opening-text
+  width: 80%
+  margin: 75px 0 35px 50px
+  +responsive-font(3vw, 20px, 32px)
+  line-height: 1.2em
+  @media (max-width: 900px)
+    +responsive-font(3.5vw, 20px, 27px)
+    width: 85%
+  @media (max-width: 768px)
+    margin: 40px 0 20px 30px
+    width: 85%
+
+.secondary-text
+  margin-left: 50px
+  font-style: italic
+  +responsive-font(2vw, 15px, 20px)
+  width: 70%
+  line-height: 1.3em
+  @media (max-width: 768px)
+    margin: 0 0 0 30px
+    width: 85%
+
+.learn-more-btn
+  width: max-content
+  padding: 20px
+  background-color: #341F2C
+  border-radius: 22px
+  margin: 35px 0 0 50px
+  opacity: 95%
+  box-shadow: 0 0 3px #341F2C
+  @media (max-width: 768px)
+    margin-left: 25px
+    padding: 15px
+
+.learn-more-text
+  color: #EAEAEA
+  +responsive-font(1vw, 14px, 16px)
+  font-family: 'Overpass', sans-serif
+
+.protest-fists
+  position: absolute
+  bottom: -5px
+  right: 50px
+  width: 200px
+  height: 200px
+  z-index: 4
+
+.bold-text
+  font-weight: 1000
 
 .container 
   width: 100%
@@ -48,35 +132,7 @@ body
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%239C92AC' fill-opacity='0.11'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E")
   box-sizing: border-box
 
-.blacklives-text, .matter-text
-  color: #341F2C
-  font-family: 'IBM Plex Sans', sans-serif
-  display: inline-block
-  +responsive-font(2vw, 20px, 26px)
-
-.blacklives-text
-  font-weight: 10
-
-.matter-text
-  font-weight: 1000
-
-.fist
-  width: 40px
-  height: 40px
-  margin: 0 5px 24px 5px
-  vertical-align: middle
-  @media (max-width: 1250px)
-    width: 35px
-    height: 35px
-    margin: 5px 5px 24px 5px
-  @media (max-width: 768px)
-    width: 30px
-    height: 30px
-    margin: 9px 5px 24px 5px
-
-
 .split-left
-  border: 1px solid pink
   width: 48%
   display: inline-block
   height: 100vh
@@ -103,7 +159,7 @@ body
     position: relative
     -webkit-transform: translateY(-140px) skewY(-11deg)
     right: auto
-    top: -150px
+    top: -200px
     padding-left: 5%
     padding-right: 5%
     padding-top: 0px
@@ -111,4 +167,8 @@ body
 
 @media only screen and (max-width: 400px)
   .container .split-right
-    top: -50px
+    top: -100px
+
+  .protest-fists
+    width: 130px
+    height: 130px
