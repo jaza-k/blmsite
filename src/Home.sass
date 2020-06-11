@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap')
 
 /// Viewport sized typography with minimum and maximum values
 /// @author Eduardo Boucas (https://codepen.io/eduardoboucas/)
@@ -17,91 +17,98 @@
   font-size: $responsive
 
 body
-  background-color: #fff5ee
+  font-size: 15px
+  background-color: #EAEAEA
   margin: 0
-  overflow-x: hidden
+  overflow: hidden
 
-svg
-  position: absolute
-  top: 0
-  left: 0
+.container 
   width: 100%
-  height: 95vh
-  z-index: -1
+  box-sizing: border-box
+  overflow: hidden
 
-.logo
-  color: seashell
+.container section 
+  width: calc(50% + 90px)
+  height: 100vh
+  margin: 0
+  display: inline-block
+  padding: 50px
+  box-sizing: border-box
+  -webkit-transform: skewX(-22deg)
+
+// .container section div 
+//   -webkit-transform: skewX(22deg)
+
+.container .split-right
   position: absolute
-  top: -2.0.5%
-  left: 1.5%
-  font-family: 'IBM Plex Serif', serif
-  // border: 1px solid red
-  +responsive-font(2vw, 13px, 15px)
+  right: -250px
+  padding-left: 80px
+  padding-right: 130px
+  background-color: #341f2c
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='32' viewBox='0 0 16 32'%3E%3Cg fill='%239C92AC' fill-opacity='0.11'%3E%3Cpath fill-rule='evenodd' d='M0 24h4v2H0v-2zm0 4h6v2H0v-2zm0-8h2v2H0v-2zM0 0h4v2H0V0zm0 4h2v2H0V4zm16 20h-6v2h6v-2zm0 4H8v2h8v-2zm0-8h-4v2h4v-2zm0-20h-6v2h6V0zm0 4h-4v2h4V4zm-2 12h2v2h-2v-2zm0-8h2v2h-2V8zM2 8h10v2H2V8zm0 8h10v2H2v-2zm-2-4h14v2H0v-2zm4-8h6v2H4V4zm0 16h6v2H4v-2zM6 0h2v2H6V0zm0 24h2v2H6v-2z'/%3E%3C/g%3E%3C/svg%3E")
+  box-sizing: border-box
 
-h1
+.blacklives-text, .matter-text
+  color: #341F2C
+  font-family: 'IBM Plex Sans', sans-serif
+  display: inline-block
+  +responsive-font(2vw, 20px, 26px)
+
+.blacklives-text
   font-weight: 10
 
-.fist-logo
-  margin-right: 7px
-  
 .matter-text
   font-weight: 1000
 
-.text-body
-  width: 60%
-  // border: 1px solid red
-  margin-top: 90px
-  color: seashell
-  font-family: 'Merriweather', serif
-  +responsive-font(1.5vw, 12px, 17px)
-  margin-left: 30px
-  @media (max-width: 950px)
-    +responsive-font(1.5vw, 12px, 15px)
+.fist
+  width: 40px
+  height: 40px
+  margin: 0 5px 24px 5px
+  vertical-align: middle
+  @media (max-width: 1250px)
+    width: 35px
+    height: 35px
+    margin: 5px 5px 24px 5px
   @media (max-width: 768px)
-    margin-top: 60px
+    width: 30px
+    height: 30px
+    margin: 9px 5px 24px 5px
 
-.opening
-  animation-name: textFadeIn
-  animation-duration: 1.7s
 
-.secondary
-  margin-top: 30px
-  animation-name: slowerTextFadeIn
-  animation-duration: 2.3s
-  font-style: italic
-  font-weight: 10
-  +responsive-font(2vw, 15px, 20px)
-  width: 70%
+.split-left
+  border: 1px solid pink
+  width: 48%
+  display: inline-block
+  height: 100vh
 
-.learn-more
-  +responsive-font(2vw, 13px, 17px)
-  margin-top: 80px
-  font-weight: 1000
-  animation-name: slowestTextFadeIn
-  animation-duration: 4.5s
+@media only screen and (max-width: 1250px)
+  .split-left
+    display: block
+    background-color: #EAEAEA
+    width: 100%
 
-@keyframes textFadeIn
-  0%
-    opacity: 0
-  100
-    opacity: 1
+  .container 
+    overflow: hidden
+    box-sizing: border-box
+    background-color: #341F2C
+    height: 100vh
+  
+  .container section 
+    display: block
+    width: calc(100%)
+    height: 80%
+  
+  .container .split-right
+    border: 1px solid green
+    position: relative
+    -webkit-transform: translateY(-140px) skewY(-11deg)
+    right: auto
+    top: -150px
+    padding-left: 5%
+    padding-right: 5%
+    padding-top: 0px
+    padding-bottom: 120px
 
-@keyframes slowerTextFadeIn
-  0%
-    opacity: 0
-  50%
-    opacity: 0
-  75%
-    opacity: 0
-  100%
-    opacity: 1
-
-@keyframes slowestTextFadeIn
-  0%
-    opacity: 0
-  50%
-    opacity: 0
-  75%
-    opacity: 0
-  100%
-    opacity: 1
+@media only screen and (max-width: 400px)
+  .container .split-right
+    top: -50px
