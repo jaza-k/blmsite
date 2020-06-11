@@ -50,15 +50,15 @@ body
     height: 30px
     margin: 9px 5px 24px 5px
 
-
 .opening-text, .secondary-text
   font-family: 'Overpass', sans-serif
   font-weight: 10
   color: #341F2C
+  user-select: none
 
 .opening-text
   width: 80%
-  margin: 75px 0 35px 50px
+  margin: 100px 0 40px 50px
   +responsive-font(3vw, 20px, 32px)
   line-height: 1.2em
   @media (max-width: 900px)
@@ -80,15 +80,16 @@ body
 
 .learn-more-btn
   width: max-content
-  padding: 20px
+  padding: 20px 25px 20px 25px
   background-color: #341F2C
   border-radius: 22px
   margin: 35px 0 0 50px
   opacity: 95%
   box-shadow: 0 0 3px #341F2C
+  cursor: pointer
   @media (max-width: 768px)
     margin-left: 25px
-    padding: 15px
+    padding: 12px 15px 12px 15px
 
 .learn-more-text
   color: #EAEAEA
@@ -98,10 +99,65 @@ body
 .protest-fists
   position: absolute
   bottom: -5px
-  right: 50px
+  right: 24px
   width: 200px
   height: 200px
   z-index: 4
+
+a
+  text-decoration: none
+
+nav
+  display: flex
+  justify-content: space-around
+  align-items: center
+  min-height: 8vh
+  font-family: 'Overpass', sans-serif
+
+.nav-links
+  color: #EAEAEA
+  display: flex
+  justify-content: space-around
+  width: 30%
+  position: absolute
+  bottom: 35px
+  left: -50px
+  z-index: 4
+  margin-left: 35px
+  @media (max-width: 1700px)
+    width: 40%
+    margin-left: 20px
+  @media (max-width: 1050px)
+    margin-left: 30px
+
+.nav-links li
+  list-style: none
+
+.nav-links a
+  color: #341F2C
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 0.04em
+  font-size: 19px
+  font-weight: 1000
+  border-bottom-color: #341F2C
+  padding-bottom: 4px
+  border-bottom-width: 2px
+  border-bottom-style: solid
+
+.burger
+  display: none
+  cursor: pointer
+  position: absolute
+  top: 12px
+  right: 3.8%
+
+.burger div
+  width: 30px
+  height: 3px
+  background-color: #341F2C
+  margin: 5px
+  transition: all 0.3s ease
 
 .bold-text
   font-weight: 1000
@@ -120,9 +176,6 @@ body
   box-sizing: border-box
   -webkit-transform: skewX(-22deg)
 
-// .container section div 
-//   -webkit-transform: skewX(22deg)
-
 .container .split-right
   position: absolute
   right: -250px
@@ -138,6 +191,11 @@ body
   height: 100vh
 
 @media only screen and (max-width: 1250px)
+  nav
+    display: none
+
+  .burger
+    display: block
   .split-left
     display: block
     background-color: #EAEAEA
@@ -155,11 +213,10 @@ body
     height: 80%
   
   .container .split-right
-    border: 1px solid green
     position: relative
     -webkit-transform: translateY(-140px) skewY(-11deg)
     right: auto
-    top: -200px
+    top: -120px
     padding-left: 5%
     padding-right: 5%
     padding-top: 0px
@@ -167,7 +224,7 @@ body
 
 @media only screen and (max-width: 400px)
   .container .split-right
-    top: -100px
+    top: -90px
 
   .protest-fists
     width: 130px
