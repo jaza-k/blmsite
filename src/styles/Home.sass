@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap')
+
+/// Viewport sized typography with minimum and maximum values
+/// @author Eduardo Boucas (https://codepen.io/eduardoboucas/)
+=responsive-font($responsive, $min, $max: false, $fallback: false)
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1)
+  $dimension: if(unit($responsive) == "vh", "height", "width")
+  $min-breakpoint: $min / $responsive-unitless * 100 / 16px + 0em
+  @media (max-#{$dimension}: #{$min-breakpoint})
+    font-size: $min
+  @if $max
+    $max-breakpoint: $max / $responsive-unitless * 100 / 16px + 0em
+    @media (min-#{$dimension}: #{$max-breakpoint})
+      font-size: $max
+  @if $fallback
+    font-size: $fallback
+  font-size: $responsive
+
+.opening-text, .secondary-text
+  font-family: 'Overpass', sans-serif
+  font-weight: 10
+  color: #341F2C
+  user-select: none
+
+.opening-text
+  width: 80%
+  margin: 150px 0 40px 50px
+  +responsive-font(3vw, 20px, 32px)
+  line-height: 1.2em
+  @media (max-width: 900px)
+    +responsive-font(3.5vw, 20px, 27px)
+    width: 85%
+    margin-top: 50px
+  @media (max-width: 768px)
+    margin: 40px 0 20px 30px
+    width: 85%
+
+.secondary-text
+  margin-left: 50px
+  font-style: italic
+  +responsive-font(2vw, 15px, 20px)
+  width: 70%
+  line-height: 1.3em
+  @media (max-width: 768px)
+    margin: 0 0 0 30px
+    width: 85%
+
+.learn-more-btn
+  width: max-content
+  padding: 20px 25px 20px 25px
+  background-color: #341F2C
+  border-radius: 22px
+  margin: 35px 0 0 50px
+  opacity: 95%
+  box-shadow: 0 0 3px #341F2C
+  cursor: pointer
+  @media (max-width: 768px)
+    margin-left: 25px
+    padding: 12px 15px 12px 15px
+
+.learn-more-text
+  color: #EAEAEA
+  +responsive-font(1vw, 16px, 17px)
+  font-family: 'Overpass', sans-serif
+
+.bold-text
+  font-weight: 1000
+  
