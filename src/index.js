@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Home';
-import About from './About';
-import WhatToDo from './WhatToDo';
-import Sources from './Sources';
+// import Home from './components/Home'
+import About from './components/About';
+import WhatToDo from './components/WhatToDo';
+import Main from './components/Main';
+import Sources from './components/Sources';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/" exact component={Home}/>
-        <Route path="/home" component={Home} />
+        <Route path="/" exact component={Main} />
+        <Route path="/home" component={Main} />
         <Route path="/about" component={About} />
         <Route path="/whattodo" component={WhatToDo} />
         <Route path="/sources" component={Sources} />
