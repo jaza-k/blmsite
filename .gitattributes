@@ -1,2 +1,3 @@
 # to change language of repo from CSS to JavaScript
-*.css linguist-language=JavaScript
+*.css linguist-detectable=false
+*.js linguist-detectable=true
