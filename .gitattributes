@@ -1,2 +1,2 @@
-* linguist-vendored
-*.js linguist-vendored=false
+# to change language of repo from CSS to JavaScript
+*.css linguist-language=JavaScript
