@@ -16,35 +16,39 @@
     font-size: $fallback
   font-size: $responsive
 
+.wrapper
+  height: 73vh
+  overflow: scroll
+  
 .main-heading
-    font-family: 'Overpass', sans-serif
-    font-weight: 1000
-    color: #341F2C
-    user-select: none
-    width: 80%
-    margin: 95px 0 40px 60px
-    +responsive-font(5vw, 39px, 40px)
-    line-height: 1.2em
-    @media (max-width: 900px)
-        +responsive-font(4.2vw, 26px, 27px)
-        width: 85%
-        margin-top: 50px
-    @media (max-width: 768px)
-        +responsive-font(4.2vw, 26px, 27px)
-        margin: 30px 0 20px 30px
-        width: 85%
+  font-family: 'Overpass', sans-serif
+  font-weight: 1000
+  color: #341F2C
+  user-select: none
+  width: 90%
+  margin: 55px 0 25px 60px
+  +responsive-font(5vw, 39px, 40px)
+  line-height: 1.2em
+  @media (max-width: 900px)
+    +responsive-font(4.2vw, 26px, 27px)
+    width: 85%
+    margin-top: 50px
+  @media (max-width: 768px)
+    +responsive-font(4.2vw, 26px, 27px)
+    margin: 30px 0 20px 30px
+    width: 85%
 
 .information-body
-    font-family: 'Overpass', sans-serif
-    font-weight: 1000
-    color: #341F2C
-    user-select: none
-    margin-left: 50px
-    font-weight: 10
-    margin-left: 60px
-    +responsive-font(2vw, 15px, 20px)
-    width: 80%
-    line-height: 1.3em
-    @media (max-width: 768px)
-        margin: 0 0 0 30px
-        width: 85%
+  font-family: 'Overpass', sans-serif
+  font-weight: 1000
+  color: #341F2C
+  user-select: none
+  font-weight: 10
+  height: 50vh
+  margin: 0 0 0 60px
+  +responsive-font(2vw, 15px, 20px)
+  width: 90%
+  line-height: 1.3em
+  @media (max-width: 768px)
+    margin: 0 0 30px 30px
+    width: 85%
