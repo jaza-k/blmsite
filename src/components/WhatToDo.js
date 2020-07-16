@@ -8,12 +8,71 @@ const WhatToDo = () => (
             <div className="wrapper">
                 <h1 className="main-heading">What To Do</h1>
                 <div className="information-body">
-                    <p className="whattodo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p className="whattodo-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                    <p className="whattodo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p className="whattodo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p className="whattodo-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-                    <p className="whattodo-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p className="information-text">Here's a list of ways you can help right now:</p>
+
+                    <div className="section-wrapper">
+                        <div className="section-box">
+                            <h3 className="section-heading">Organizations to donate to</h3>
+                            <ul className="section-list">
+                                <li className="list-item"><a href="https://ca.gofundme.com/f/georgefloyd" target="_blank" rel=" noopener noreferrer">George Floyd Memorial Fund</a></li>
+                                <li className="list-item"><a href="https://www.joincampaignzero.org/" target="_blank" rel="noopener noreferrer">Campaign Zero</a></li>
+                                <li className="list-item"><a href="https://www.innocenceproject.org/" target="_blank" rel="noopener noreferrer">Innocence Project</a></li>
+                                <li className="list-item"><a href="https://justiceforbreonna.org/" target="_blank" rel="noopener noreferrer">Justice For Breonna</a></li>
+                                <li className="list-item"><a href="https://www.blackvisionsmn.org/" target="_blank" rel="noopener noreferrer">Black Visions Collective</a></li>
+                                <li className="list-item"><a href="https://www.reclaimtheblock.org/" target="_blank" rel="noopener noreferrer">Reclaim The Block</a></li>
+                                <li className="list-item"><a href="https://www.nationalbailout.org/" target="_blank" rel="noopener noreferrer">National Bail Out</a></li>
+                            </ul>
+                        </div>
+
+                        <div className="section-box">
+                            <h3 className="section-heading">Petitions to sign</h3>
+                            <ul className="section-list">
+                                <li className="list-item">Justice For George Floyd</li>
+                                <li className="list-item">Colors Of Change</li>
+                                <li className="list-item">Justice For Ahmaud Arbery</li>
+                                <li className="list-item">Colors Of Change</li>
+                                <li className="list-item">Justice For Ahmaud Arbery</li>
+                                <li className="list-item">Colors Of Change</li>
+                                <li className="list-item">Justice For Ahmaud Arbery</li>
+                            </ul>
+                        </div>
+
+                        <div className="section-box">
+                            <h3 className="section-heading">Text or call</h3>
+                            <ul className="section-list">
+                                <li className="list-item">Text "JUSTICE" to 668366</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                            </ul>
+                        </div>
+
+                        <div className="section-box">
+                            <h3 className="section-heading">Register to vote</h3>
+                            <ul className="section-list">
+                                <li className="list-item">Text "JUSTICE" to 668366</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                            </ul>
+                        </div>
+
+                        <div className="section-box">
+                            <h3 className="section-heading">Text or call</h3>
+                            <ul className="section-list">
+                                <li className="list-item">Text "JUSTICE" to 668366</li>
+                                <li className="list-item">Text "FLOYD" to 55156</li>
+                                <li className="list-item">Get in contact with the District Attorney & Minneapolis Mayor.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
