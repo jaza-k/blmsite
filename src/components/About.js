@@ -8,8 +8,9 @@ const About = () => (
             <div className="wrapper">
                 <h1 className="main-heading">About</h1>
                 <div class="information-body">
-                    <p className="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p className="about-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+                    <p className="information-text">Racial injustice has existed for centuries, and is unfortunately still a prominent issue around the world today.</p>
+                    <p className="information-text">Following the death of George Floyd, millions of people around the globe have participated in protests and demonstrations against racism and police violence.</p>
+                    <p className="information-text">This website was created as a means of spreading awareness around this fight for racial equality. The <a href="/whattodo" style={{textDecoration: 'underline', color: '#341F2C'}}>What To Do</a> page contains various resources and ways you can help in supporting this cause.</p>
                 </div>
             </div>
         </div>
