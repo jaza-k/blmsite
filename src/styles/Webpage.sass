@@ -78,8 +78,7 @@ $break-mid: 768px
 
   .information-text
     margin-right: 17px
-
-
+    
 /* STYLING SPECIFIC TO WHAT-TO-DO PAGE */
 
 .section-wrapper
@@ -126,10 +125,35 @@ $break-mid: 768px
 .section-list
   padding: 0
   margin: 10px 0 0 8px
-  width: 80%
+  width: 85%
   +responsive-font(1vw, 15px, 16px)
   line-height: 1.6em
   font-weight: 10
 
-.section-list .list-item
+.list-item
+  padding: 2px 0 0 3px
+  width: 81%
   list-style: none
+  &:hover
+    cursor: pointer
+    transition: all 0.2s ease-in
+    background: #ac9ba6
+    border-radius: 2px
+
+.list-item a
+  color: black
+
+#textorcall
+  &:hover
+    background: #eaeaea
+    cursor: default
+
+.contact-heading
+  list-style: none
+  font-weight: 1000
+  margin-top: 10px
+
+.contact
+  +responsive-font(0.8vw, 13px, 14px)
+  line-height: 15px
+  margin: 8px 0 0 0
