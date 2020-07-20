@@ -29,18 +29,26 @@ const WhatToDo = () => {
             <div className="section-wrapper">
                 <Card heading="Organizations to donate to">
                     <ul className="section-list">
-                        {organizations.map((organization, index) => <li key={index} className="list-item">{organization.name}</li>)}
+                        {organizations.map((organization, index) => <li key={index} className="list-item"><a href={organization.url} target="_blank" rel="noopener noreferrer">{organization.name}</a></li>)}
                     </ul>
                 </Card>
 
                 <Card heading="Petitions to sign">
                     <ul className="section-list">
-                        {petitions.map((petition, index) => <li key={index} className="list-item">{petition.name}</li>)}
+                        {petitions.map((petition, index) => <li key={index} className="list-item"><a href={petition.url} target="_blank" rel="noopener noreferrer">{petition.name}</a></li>)}
                     </ul>
                 </Card> 
 
                 <Card heading="Text or call">
-                    <h1>Yo</h1>
+                    <li className="list-item" id="textorcall">Text "JUSTICE" to 668366</li>
+                    <li className="list-item" id="textorcall">Text "FLOYD" to 55156</li>
+                    <li className="list-item" className="contact-heading">Get in contact with officials:</li>
+                    <div className="contact">
+                        <li className="list-item" id="textorcall">Minneapolis District Attorney</li>
+                        <li className="list-item" id="textorcall">Mike Freeman</li>
+                        <li className="list-item" id="textorcall">(612)-348-5550</li>
+                        <li className="list-item" id="textorcall">citizeninfo@hennepin.us</li>
+                    </div>
                 </Card>
 
                 <Card heading="Register to vote">
@@ -64,20 +72,6 @@ const WhatToDo = () => {
 
                         {renderCards()}
 
-                        {/* <div className="section-box">
-                            <h3 className="section-heading">Text or call</h3>
-                            <ul className="section-list">
-                                <li className="list-item" id="textorcall">Text "JUSTICE" to 668366</li>
-                                <li className="list-item" id="textorcall">Text "FLOYD" to 55156</li>
-                                <li className="list-item" className="contact-heading">Get in contact with officials:</li>
-                                <div className="contact">
-                                    <li className="list-item" id="textorcall">Minneapolis District Attorney</li>
-                                    <li className="list-item" id="textorcall">Mike Freeman</li>
-                                    <li className="list-item" id="textorcall">(612)-348-5550</li>
-                                    <li className="list-item" id="textorcall">citizeninfo@hennepin.us</li>
-                                </div>
-                            </ul>
-                        </div> */}
                     </div>
                 </div>
             </div>
