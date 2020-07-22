@@ -1,9 +1,10 @@
 import React from 'react';
 import '../styles/Webpage.sass';
-import Main from '../components/Main';
-import Card from '../components/Card';
+import '../styles/Actions.sass';
+import Main from './Main';
+import Card from './Card';
 
-const WhatToDo = () => {
+const Actions = () => {
 
     const renderCards = () => {
         const petitions = [
@@ -24,6 +25,26 @@ const WhatToDo = () => {
             { name: "Reclaim The Block", url: "https://www.reclaimtheblock.org/" },
             { name: "National Bail Out", url: "https://www.nationalbailout.org/" }
         ]
+        const contacts = {
+            contact0: {
+                "id": "Minneapolis District Attorney",
+                "name": "Mike Freeman",
+                "number": "(612)-348-5550",
+                "email": "citizeninfo@hennepin.us"
+            },
+            contact1: {
+                "id": "Minneapolis Mayor",
+                "name": "Jacob Frey",
+                "number": "(612)-673-2100",
+                "email": ""
+            },
+            contact2: {
+                "id": "Louisville Mayor",
+                "name": "Greg Fischer",
+                "number": "(502)-574-2003",
+                "email": ""
+            }
+        }
 
         return (
             <div className="section-wrapper">
@@ -40,23 +61,34 @@ const WhatToDo = () => {
                 </Card> 
 
                 <Card heading="Text or call">
-                    <li className="list-item" id="textorcall">Text "JUSTICE" to 668366</li>
-                    <li className="list-item" id="textorcall">Text "FLOYD" to 55156</li>
-                    <li className="list-item" className="contact-heading">Get in contact with officials:</li>
-                    <div className="contact">
-                        <li className="list-item" id="textorcall">Minneapolis District Attorney</li>
-                        <li className="list-item" id="textorcall">Mike Freeman</li>
-                        <li className="list-item" id="textorcall">(612)-348-5550</li>
-                        <li className="list-item" id="textorcall">citizeninfo@hennepin.us</li>
-                    </div>
+                    <ul className="section-list">
+                        <li className="list-item">Text "JUSTICE" to 668366</li>
+                        <li className="list-item">Text "FLOYD" to 55156</li>
+                    </ul>
+
+                    <h5 className="contact-heading">Get in contact with officials:</h5>
+                    {Object.keys(contacts).map(function(key, index) {
+                        return(
+                            <div className="contact">
+                                <li key={index}>{contacts[key].id}</li>
+                                <li key={index}>{contacts[key].name}</li>
+                                <li key={index}>{contacts[key].number}</li>
+                                <li key={index}>{contacts[key].email}</li>
+                            </div>
+                        )
+                    })}
                 </Card>
 
                 <Card heading="Register to vote">
-                    <h1>Yo</h1>
+                    <h5 className="voting-heading">Voting is an opportunity for change, and it's a chance to stand up for issues you care about.</h5>
+                    <p className="voting-info">Here are some useful links (U.S. only):</p>
+                    <p>Filler text</p>
+                    <p>Filler text</p>
+                    <p>Filler text</p>
                 </Card>
 
                 <Card heading="Educate yourself">
-                    <h1>Yo</h1>
+                    <h4>Filler text</h4>
                 </Card>
             </div>
         )
@@ -64,14 +96,12 @@ const WhatToDo = () => {
 
     return (
         <Main>
-            <div className="WhatToDo">
+            <div className="Actions">
                 <div className="wrapper">
                     <h1 className="main-heading">What To Do</h1>
                     <div className="information-body">
                         <p className="information-text">Here's a list of ways you can help right now:</p>
-
                         {renderCards()}
-
                     </div>
                 </div>
             </div>
@@ -79,4 +109,4 @@ const WhatToDo = () => {
     )
 }
 
-export default WhatToDo;
+export default Actions;
