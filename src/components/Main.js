@@ -42,7 +42,7 @@ const Main = ({children}) => {
                             <Link to="/about">
                                 <li>About</li>
                             </Link>
-                            <Link to="/whattodo">
+                            <Link to="/actions">
                                 <li>What To Do</li>
                             </Link>
                             <Link to="/sources">
@@ -74,7 +74,7 @@ const Main = ({children}) => {
                                 <Link to="/about">
                                     <li>About</li>
                                 </Link>
-                                <Link to="/whattodo">
+                                <Link to="/actions">
                                     <li>What To Do</li>
                                 </Link>
                                 <Link to="/sources">
