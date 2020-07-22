@@ -58,7 +58,6 @@ $break-mid: 768px
     width: 85%
 
 .information-body
-  // border: 1px solid green
   animation-name: slowTextFadeIn
   animation-duration: 0.8s
   font-family: 'Overpass', sans-serif
@@ -76,84 +75,5 @@ $break-mid: 768px
     margin: 0 0 30px 30px
     width: 90%
 
-  .information-text
-    margin-right: 17px
-    
-/* STYLING SPECIFIC TO WHAT-TO-DO PAGE */
-
-.section-wrapper
-  // border: 1px solid red
-  display: flex
-  flex-wrap: wrap
-  columns: 2
-  margin: 15px 0 0 0
-  overflow-y: scroll
-  padding: 2px 0 65px 5px
-  width: 100%
-  height: 75%
-  @media (max-width: 835px)
-    columns: 1
-    display: flex
-  @media (max-width: $break-mid)
-    height: 200px
-  @media (max-width: 650px)
-    width: 95%
-    height: 220px
-    padding: 0 0 120px 5px
-
-.section-box
-  border: 2px solid #6e395b
-  border-radius: 15px
-  width: 42%
-  padding: 10px 0 10px 10px
-  box-shadow: 0 0 6px #633252
-  margin: 5px 25px 20px 0
-  @media (max-width: 835px)
-    margin: 5px 5px 20px 0
-    width: 50%
-  @media (max-width: 650px)
-    width: 90%
-    margin: 3px 25px 15px 0
-
-.section-heading
-  font-weight: bold
-  text-transform: uppercase
-  margin: 0
-  color: #633251
-  +responsive-font(1.2vw, 15px, 16px)
-
-.section-list
-  padding: 0
-  margin: 10px 0 0 8px
-  width: 85%
-  +responsive-font(1vw, 15px, 16px)
-  line-height: 1.6em
-  font-weight: 10
-
-.list-item
-  padding: 2px 0 0 3px
-  width: 81%
-  list-style: none
-  &:hover
-    cursor: pointer
-    transition: all 0.2s ease-in
-    background: #ac9ba6
-    border-radius: 2px
-
-.list-item a
-  color: black
-
-#textorcall
-  &:hover
-    background: #eaeaea
-    cursor: default
-
-.contact-heading
-  list-style: none
-  font-weight: 1000
-  margin-top: 10px
-
-.contact
-  +responsive-font(0.8vw, 13px, 14px)
-  line-height: 15px
-  margin: 8px 0 0 0
+.information-text
+  margin-right: 17px
