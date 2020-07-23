@@ -45,6 +45,14 @@ const Actions = () => {
                 "email": ""
             }
         }
+        const voting = [
+            { topic: "General voting information", url: "https://www.usa.gov/voting" },
+            { topic: "How to vote", url: "https://www.usa.gov/how-to-vote" },
+            { topic: "Register to vote", url: "https://vote.gov/" },
+            { topic: "Online voter registration", url: "https://ballotpedia.org/Online_voter_registration" },
+            { topic: "Youth voting", url: "https://www.rockthevote.org/" },
+            { topic: "General voting information", url: "https://www.usa.gov/voting" }
+        ]
 
         return (
             <div className="section-wrapper">
@@ -82,9 +90,9 @@ const Actions = () => {
                 <Card heading="Register to vote">
                     <h5 className="voting-heading">Voting is an opportunity for change, and it's a chance to stand up for issues you care about.</h5>
                     <p className="voting-info">Here are some useful links (U.S. only):</p>
-                    <p>Filler text</p>
-                    <p>Filler text</p>
-                    <p>Filler text</p>
+                    <ul className="section-list" id="voting-list">
+                        {voting.map((topic, index) => <li key={index} className="list-item"><a href={topic.url} target="_blank" rel="noopener noreferrer">{topic.topic}</a></li>)}
+                    </ul>
                 </Card>
 
                 <Card heading="Educate yourself">
