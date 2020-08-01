@@ -50,8 +50,14 @@ const Actions = () => {
             { topic: "How to vote", url: "https://www.usa.gov/how-to-vote" },
             { topic: "Register to vote", url: "https://vote.gov/" },
             { topic: "Online voter registration", url: "https://ballotpedia.org/Online_voter_registration" },
-            { topic: "Youth voting", url: "https://www.rockthevote.org/" },
-            { topic: "General voting information", url: "https://www.usa.gov/voting" }
+            { topic: "Youth voting", url: "https://www.rockthevote.org/" }
+        ]
+        const education = [
+            { topic: "Black Lives Matter explained", url: "https://www.youtube.com/watch?v=YG8GjlLbbvs"},
+            { topic: "Books to read", url: "https://www.harpersbazaararabia.com/featured-news/books-on-racism-understanding-black-lives-matter-movement"},
+            { topic: "Movies", url: "https://womenlovetech.com/10-movies-and-shows-you-can-watch-to-support-the-black-lives-matter-movement/"},
+            { topic: "Podcasts", url: "https://www.redandblack.com/culture/6-podcasts-about-the-black-lives-matter-movement/article_ee63981c-ab6b-11ea-aff0-6bcc5da0108f.html"},
+            { topic: "Documentaries", url: "https://www.cosmopolitan.com/uk/reports/a32751489/black-lives-matter-documentaries/"}
         ]
 
         return (
@@ -96,7 +102,9 @@ const Actions = () => {
                 </Card>
 
                 <Card heading="Educate yourself">
-                    <h4>Filler text</h4>
+                    <ul className="section-list" id="voting-list">
+                        {education.map((topic, index) => <li key={index} className="list-item"><a href={topic.url} target="_blank" rel="noopener noreferrer">{topic.topic}</a></li>)}
+                    </ul>
                 </Card>
             </div>
         )
