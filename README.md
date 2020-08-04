@@ -1,4 +1,4 @@
-# website link
+# [blmmovement.netlify.com](https://blmmovement.netlify.com)
 A simple site with a modern UI made for spreading information about the BLM protests/movement.
  
 ## To run
